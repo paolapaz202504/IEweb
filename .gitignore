@@ -1,0 +1,9 @@
+# Ignorar la carpeta de documentos adjuntos
+docs/
+
+# Archivos de sistema y temporales
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+Requerimiento.txt

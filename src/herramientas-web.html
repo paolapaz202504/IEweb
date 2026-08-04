@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Web - Instituto Electoral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- TOP BAR DE ACCESO RÁPIDO PERSISTENTE -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-phone"></i> PBX: +502 2378-3900</span>
+                <span><i class="fa-solid fa-envelope"></i> info@tse.org.gt</span>
+                <span><i class="fa-solid fa-location-dot"></i> Ciudad de Guatemala, Guatemala</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="https://portalweb.tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-globe"></i> Portal TSE Principal</a>
+                <a href="https://tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-building-columns"></i> Sitio Web Institucional</a>
+                <a href="https://aulavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-graduation-cap"></i> Aula Virtual</a>
+                <a href="https://bibliotecavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-book-bookmark"></i> Biblioteca Virtual</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo_tse.png" alt="Logotipo Oficial TSE Guatemala" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">Instituto Electoral</span>
+                    <span class="logo-subtitle">Tribunal Supremo Electoral</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="instituto.html" class="nav-link">Instituto Electoral</a>
+                <a href="organigrama.html" class="nav-link">Organigrama</a>
+                <a href="coordinaciones.html" class="nav-link">Coordinaciones</a>
+                <a href="herramientas-web.html" class="nav-link active">Herramientas Web</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <button class="mobile-toggle" aria-label="Abrir Menú"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div style="background: var(--grad-dark); color:#FFF; padding: 60px 0; text-align:center;">
+        <div class="container">
+            <span class="slide-tag"><i class="fa-solid fa-laptop-code"></i> Innovación Digital</span>
+            <h1 style="font-size: 2.8rem; color:#FFF; margin-top:10px;">Biblioteca y Plataformas Virtuales</h1>
+            <p style="color: rgba(255,255,255,0.85); max-width:650px; margin: 10px auto 0;">Accede a la formación cívica y bibliografía electoral desde cualquier dispositivo.</p>
+        </div>
+    </div>
+
+    <!-- HERRAMIENTAS WEB GRID -->
+    <section class="section">
+        <div class="container">
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
+                
+                <!-- Card 1: Aula Virtual -->
+                <div class="feature-card" style="padding: 40px;">
+                    <div class="card-icon" style="width: 70px; height: 70px; font-size: 2rem; background: rgba(0, 201, 255, 0.15); color: var(--color-primary);"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="card-title" style="font-size: 1.6rem;">Aula Virtual TSE</h3>
+                    <p class="card-text">
+                        Plataforma educativa en línea donde el Instituto Electoral imparte cursos e instructivos interactivos dirigidos a la ciudadanía para capacitar de forma gratuita en temas cívicos y electorales.
+                    </p>
+                    <div style="margin-top:20px;">
+                        <a href="https://aulavirtual.tse.org.gt/" target="_blank" class="btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-right-to-bracket"></i> Ingresar al Aula Virtual
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Biblioteca Virtual -->
+                <div class="feature-card" style="padding: 40px;">
+                    <div class="card-icon" style="width: 70px; height: 70px; font-size: 2rem; background: rgba(255, 184, 0, 0.15); color: var(--color-gold-hover);"><i class="fa-solid fa-book-bookmark"></i></div>
+                    <h3 class="card-title" style="font-size: 1.6rem;">Biblioteca Virtual TSE</h3>
+                    <p class="card-text">
+                        Repositorio digital oficial con acceso a manuales, instructivos, libros, boletines y folletos de divulgación publicados por el Instituto Electoral para consulta pública.
+                    </p>
+                    <div style="margin-top:20px;">
+                        <a href="https://bibliotecavirtual.tse.org.gt/" target="_blank" class="btn-primary" style="width: 100%; justify-content: center; background: var(--grad-gold); color: var(--color-navy);">
+                            <i class="fa-solid fa-book-open"></i> Explorar Biblioteca Virtual
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL REUTILIZABLE -->
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

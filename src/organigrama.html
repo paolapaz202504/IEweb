@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama - Instituto Electoral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .tree-node {
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--color-border);
+            text-align: center;
+            position: relative;
+            transition: var(--transition-bounce);
+        }
+        .tree-node:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .tree-node.main-node {
+            background: var(--grad-primary);
+            color: #FFFFFF;
+            border: none;
+        }
+        .tree-node.main-node h3 { color: #FFFFFF; }
+        .tree-connector {
+            width: 2px;
+            height: 30px;
+            background: var(--color-primary);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR DE ACCESO RÁPIDO PERSISTENTE -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-phone"></i> PBX: +502 2378-3900</span>
+                <span><i class="fa-solid fa-envelope"></i> info@tse.org.gt</span>
+                <span><i class="fa-solid fa-location-dot"></i> Ciudad de Guatemala, Guatemala</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="https://portalweb.tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-globe"></i> Portal TSE Principal</a>
+                <a href="https://tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-building-columns"></i> Sitio Web Institucional</a>
+                <a href="https://aulavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-graduation-cap"></i> Aula Virtual</a>
+                <a href="https://bibliotecavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-book-bookmark"></i> Biblioteca Virtual</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo_tse.png" alt="Logotipo Oficial TSE Guatemala" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">Instituto Electoral</span>
+                    <span class="logo-subtitle">Tribunal Supremo Electoral</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="instituto.html" class="nav-link">Instituto Electoral</a>
+                <a href="organigrama.html" class="nav-link active">Organigrama</a>
+                <a href="coordinaciones.html" class="nav-link">Coordinaciones</a>
+                <a href="herramientas-web.html" class="nav-link">Herramientas Web</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <button class="mobile-toggle" aria-label="Abrir Menú"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <div style="background: var(--grad-dark); color:#FFF; padding: 60px 0; text-align:center;">
+        <div class="container">
+            <span class="slide-tag"><i class="fa-solid fa-sitemap"></i> Estructura Jerárquica</span>
+            <h1 style="font-size: 2.8rem; color:#FFF; margin-top:10px;">Organigrama del Instituto Electoral</h1>
+            <p style="color: rgba(255,255,255,0.85); max-width:650px; margin: 10px auto 0;">Estructura administrativa conformada según el Acuerdo No. 79-2026 de Normas y Procedimientos.</p>
+        </div>
+    </div>
+
+    <!-- ORGANIGRAMA INTERACTIVO -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Vista Jerárquica 2025</span>
+                <h2 class="section-title">Estructura Organizacional General</h2>
+            </div>
+
+            <!-- Nivel Superior -->
+            <div style="max-width: 500px; margin: 0 auto;">
+                <div class="tree-node main-node">
+                    <div style="font-size:2.2rem; margin-bottom:8px;"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3 style="font-size: 1.35rem;">Pleno de Magistrados del TSE</h3>
+                    <p style="font-size:0.85rem; opacity:0.9;">Máxima Autoridad Electoral</p>
+                </div>
+            </div>
+
+            <div class="tree-connector"></div>
+
+            <!-- Nivel Dirección -->
+            <div style="max-width: 550px; margin: 0 auto;">
+                <div class="tree-node" style="border-color: var(--color-primary);">
+                    <div style="font-size:2rem; color: var(--color-primary); margin-bottom:6px;"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 class="card-title">Dirección del Instituto Electoral</h3>
+                    <p class="card-text">Dirección General y Planificación Institucional</p>
+                </div>
+            </div>
+
+            <div class="tree-connector" style="height: 40px;"></div>
+
+            <!-- Nivel Coordinaciones (Grid) -->
+            <div class="card-grid">
+                <!-- Node 1 -->
+                <div class="tree-node">
+                    <div style="font-size:1.8rem; color: var(--color-cyan); margin-bottom:10px;"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="card-title" style="font-size:1.1rem;">Coordinación de Capacitación a la Ciudadanía</h3>
+                    <p class="card-text" style="font-size:0.85rem;">Talleres cívicos, voluntariado e interacción democrática.</p>
+                </div>
+
+                <!-- Node 2 -->
+                <div class="tree-node">
+                    <div style="font-size:1.8rem; color: var(--color-gold-hover); margin-bottom:10px;"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3 class="card-title" style="font-size:1.1rem;">Coordinación de Programas de Formación</h3>
+                    <p class="card-text" style="font-size:0.85rem;">Cursos especializados y diplomados académicos.</p>
+                </div>
+
+                <!-- Node 3 -->
+                <div class="tree-node">
+                    <div style="font-size:1.8rem; color: var(--color-slate); margin-bottom:10px;"><i class="fa-solid fa-folder-tree"></i></div>
+                    <h3 class="card-title" style="font-size:1.1rem;">Coordinación Administrativa</h3>
+                    <p class="card-text" style="font-size:0.85rem;">Gestión de recursos, logística y procedimientos.</p>
+                </div>
+
+                <!-- Node 4 -->
+                <div class="tree-node">
+                    <div style="font-size:1.8rem; color: var(--color-primary); margin-bottom:10px;"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="card-title" style="font-size:1.1rem;">Área de Herramientas Web</h3>
+                    <p class="card-text" style="font-size:0.85rem;">Biblioteca Virtual y Plataformas Virtuales / Aula Virtual.</p>
+                </div>
+
+                <!-- Node 5 -->
+                <div class="tree-node">
+                    <div style="font-size:1.8rem; color: var(--color-gold-hover); margin-bottom:10px;"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="card-title" style="font-size:1.1rem;">Área de Diseño y Producción de Recursos</h3>
+                    <p class="card-text" style="font-size:0.85rem;">Diseño gráfico, producción audiovisual, materiales educativos e impresos institucionales.</p>
+                </div>
+            </div>
+
+            <!-- Botón de Descarga PDF -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="docs/ORGANIGRAMA IE 2025 SIMPLE.pdf" target="_blank" class="btn-primary">
+                    <i class="fa-solid fa-file-pdf"></i> Descargar Organigrama PDF Oficial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL REUTILIZABLE -->
+    <footer class="site-footer"></footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
