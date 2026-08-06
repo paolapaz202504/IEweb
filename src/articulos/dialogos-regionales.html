@@ -1,0 +1,43 @@
+<!-- ARTÍCULO 2: DIÁLOGOS REGIONALES DE LA POLÍTICA DE JUVENTUD DEL TSE -->
+<article class="article-detail" style="padding: 20px; font-family: sans-serif;">
+    <span style="font-weight: 800; background: var(--color-primary, #0076cc); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; display: inline-block;">Plan de Acción del TSE</span>
+    <h2 style="color: var(--color-navy, #0a2540); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">Diálogos Regionales de la Política de Juventud del TSE</h2>
+    <span style="font-size: 0.9rem; color: var(--color-text-muted, #666); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Publicado en Julio, 2026</span>
+    
+    <p style="color: var(--color-text-main, #333); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+        Los <strong>Diálogos Regionales de la Política de Juventud del Tribunal Supremo Electoral</strong> representan la principal herramienta participativa de consulta juvenil a nivel territorial. Su objetivo es recolectar las inquietudes, realidades y propuestas de los jóvenes de los 22 departamentos del país para convertirlas en estrategias que promuevan la participación cívica activa y disminuyan el abstencionismo en los comicios.
+    </p>
+
+    <!-- Galería Interactiva con Filtro por Departamento (Se asume JS de soporte en el index o voluntariado) -->
+    <h3 style="color: var(--color-navy, #0a2540); font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid var(--color-border, #eee); padding-bottom: 8px;">Galería de Fotos por Departamento</h3>
+    <div style="margin-bottom: 20px;">
+        <label for="dept-select" style="font-size: 0.9rem; font-weight: 700; color: var(--color-navy, #0a2540); margin-right: 10px;">Selecciona el departamento:</label>
+        <select id="dept-select" onchange="filterVceGallery(this.value)" style="padding: 8px 16px; border-radius: 4px; border: 1px solid var(--color-border, #eee); color: var(--color-navy, #0a2540); font-weight: 700;">
+            <option value="alta_verapaz">Alta Verapaz</option>
+            <option value="escuintla">Escuintla</option>
+            <option value="guatemala">Guatemala</option>
+            <option value="huehuetenango">Huehuetenango</option>
+            <option value="izabal">Izabal</option>
+            <option value="jalapa">Jalapa</option>
+            <option value="quetalzatenango">Quetzaltenango</option>
+            <option value="quiche">Quiché</option>
+            <option value="san_marcos">San Marcos</option>
+        </select>
+    </div>
+    
+    <!-- Contenedor de la Galería Departamental -->
+    <div id="vce-dept-gallery-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 30px;">
+        <!-- Se carga dinámicamente -->
+    </div>
+
+    <p style="color: var(--color-text-main, #333); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+        Gracias a estas consultas del TSE, el Instituto Electoral valida técnicamente los programas y talleres educativos para la juventud de forma coordinada con la sociedad civil, asegurando que se adapten con pertinencia cultural e inclusión lingüística a cada uno de los municipios de la República.
+    </p>
+
+    <!-- Botón de Descarga del Documento del Drive -->
+    <div style="text-align: center;">
+        <a href="https://drive.google.com/drive/folders/1m-GhQLx8SA4L7EPtdXrbW6sDEvfFB-9w" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; background: var(--color-navy, #0a2540); color: #FFFFFF; font-weight: 800; padding: 14px 28px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 15px rgba(10,37,64,0.15);">
+            <i class="fa-solid fa-download"></i> Descargar Documento Diálogos Regionales
+        </a>
+    </div>
+</article>
