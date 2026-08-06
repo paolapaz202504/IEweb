@@ -331,194 +331,208 @@
             </div>
 
             <!-- Gráficos Interactivos mediante CSS y Layout Flexbox/Grid -->
+            <!-- FILA 1: METROPOLITANA VS INTERIOR & BRECHA DE GÉNERO (ALTURAS UNIFICADAS A 430PX) -->
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1280px; margin: 40px auto 0; align-items: start;">
                 
-                <!-- Gráfico 1: Tasa de Analfabetismo por Sexo -->
-                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
-                    <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 25px; border-left: 3px solid var(--color-gold, #b8860b); padding-left: 10px;">Brecha de Analfabetismo por Género</h3>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px; font-weight: 700;">
-                                <span style="color: var(--color-navy);"><i class="fa-solid fa-venus"></i> Mujeres analfabetas (1.16 M)</span>
-                                <span style="color: #e74c3c;">21.33%</span>
+                <!-- Subsección 1: Distribución y Brecha Metropolitana vs. Interior -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); min-height: 430px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 25px; border-left: 3px solid var(--color-primary); padding-left: 10px;">Distribución y Brecha Metropolitana vs. Interior</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 24px;">
+                            <!-- Área Metropolitana -->
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 8px; font-weight: 700;">
+                                    <span style="color: var(--color-navy);"><i class="fa-solid fa-city"></i> Área Metropolitana (Departamento de Guatemala)</span>
+                                    <span style="color: var(--color-primary);">22.09% del Padrón</span>
+                                </div>
+                                <div style="width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 7px; overflow: hidden; margin-bottom: 6px;">
+                                    <div style="width: 22.09%; height: 100%; background: var(--color-primary); border-radius: 7px;"></div>
+                                </div>
+                                <span style="font-size: 0.8rem; color: #2ecc71; font-weight: 700;"><i class="fa-solid fa-graduation-cap"></i> Tasa de Analfabetismo Baja: 5.41%</span>
                             </div>
-                            <div style="width: 100%; height: 16px; background: rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
-                                <div style="width: 21.33%; height: 100%; background: #e74c3c; border-radius: 8px;"></div>
-                            </div>
-                        </div>
 
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px; font-weight: 700;">
-                                <span style="color: var(--color-navy);"><i class="fa-solid fa-mars"></i> Hombres analfabetos (575k)</span>
-                                <span style="color: var(--color-primary);">12.26%</span>
-                            </div>
-                            <div style="width: 100%; height: 16px; background: rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
-                                <div style="width: 12.26%; height: 100%; background: var(--color-primary); border-radius: 8px;"></div>
+                            <!-- Interior de la República -->
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 8px; font-weight: 700;">
+                                    <span style="color: var(--color-navy);"><i class="fa-solid fa-mountain-sun"></i> Interior de la República (21 Departamentos)</span>
+                                    <span style="color: var(--color-gold, #b8860b);">77.91% del Padrón</span>
+                                </div>
+                                <div style="width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 7px; overflow: hidden; margin-bottom: 6px;">
+                                    <div style="width: 77.91%; height: 100%; background: var(--color-gold, #b8860b); border-radius: 7px;"></div>
+                                </div>
+                                <span style="font-size: 0.8rem; color: #e74c3c; font-weight: 700;"><i class="fa-solid fa-triangle-exclamation"></i> Tasa de Analfabetismo Alta: 20.47% (Brecha de 4x)</span>
                             </div>
                         </div>
                     </div>
                     
-                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 25px;">
-                        * El analfabetismo es significativamente superior en el sector femenino empadronado. El Instituto Electoral prioriza metodologías de capacitación visual y auditiva no escritas para mitigar esta brecha.
-                    </p>
-                </div>
-
-                <!-- Gráfico 2: Top Departamentos Priorizados con Mayor Densidad y Brechas -->
-                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
-                    <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 3px solid var(--color-primary); padding-left: 10px;">Focalización Territorial Prioritaria (Top Departamentos)</h3>
-                    
-                    <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
-                        <thead>
-                            <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-navy); font-weight: 800;">
-                                <th style="padding: 10px 5px;">Departamento</th>
-                                <th style="padding: 10px 5px; text-align: right;">Empadronados</th>
-                                <th style="padding: 10px 5px; text-align: right;">Analfabetismo</th>
-                                <th style="padding: 10px 5px; text-align: right;">Jóvenes (18-30)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid var(--color-border);">
-                                <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Guatemala</td>
-                                <td style="padding: 10px 5px; text-align: right;">2,245,436</td>
-                                <td style="padding: 10px 5px; text-align: right; color:#2ecc71; font-weight: 700;">5.41%</td>
-                                <td style="padding: 10px 5px; text-align: right;">23.27%</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--color-border);">
-                                <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Huehuetenango</td>
-                                <td style="padding: 10px 5px; text-align: right;">766,053</td>
-                                <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">26.93%</td>
-                                <td style="padding: 10px 5px; text-align: right; font-weight: 700;">27.51%</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--color-border);">
-                                <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Alta Verapaz</td>
-                                <td style="padding: 10px 5px; text-align: right;">711,211</td>
-                                <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">33.81%</td>
-                                <td style="padding: 10px 5px; text-align: right; font-weight: 700; color: var(--color-primary);">31.69%</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--color-border);">
-                                <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">San Marcos</td>
-                                <td style="padding: 10px 5px; text-align: right;">681,875</td>
-                                <td style="padding: 10px 5px; text-align: right; color:var(--color-gold, #b8860b); font-weight: 700;">17.67%</td>
-                                <td style="padding: 10px 5px; text-align: right;">25.29%</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid var(--color-border);">
-                                <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Quiché</td>
-                                <td style="padding: 10px 5px; text-align: right;">587,868</td>
-                                <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">35.78%</td>
-                                <td style="padding: 10px 5px; text-align: right; font-weight: 700;">28.86%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 25px;">
-                        * Tabla de datos del Top 5 de departamentos del país, destacando de forma contrastada los focos con mayor analfabetismo y porcentaje de juventud (como Alta Verapaz y Quiché) para guiar los esfuerzos de capacitación y cobertura del Instituto Electoral.
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- FILA 2: ANÁLISIS COMPLEMENTARIO (METROPOLITANA VS INTERIOR & MUNICIPIOS CRÍTICOS) -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1280px; margin: 40px auto 0; align-items: start;">
-                
-                <!-- Subsección 3: Brecha Metropolitana vs Interior -->
-                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
-                    <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 25px; border-left: 3px solid var(--color-primary); padding-left: 10px;">Distribución y Brecha Metropolitana vs. Interior</h3>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 24px;">
-                        <!-- Área Metropolitana -->
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 8px; font-weight: 700;">
-                                <span style="color: var(--color-navy);"><i class="fa-solid fa-city"></i> Área Metropolitana (Departamento de Guatemala)</span>
-                                <span style="color: var(--color-primary);">22.09% del Padrón</span>
-                            </div>
-                            <div style="width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 7px; overflow: hidden; margin-bottom: 6px;">
-                                <div style="width: 22.09%; height: 100%; background: var(--color-primary); border-radius: 7px;"></div>
-                            </div>
-                            <span style="font-size: 0.8rem; color: #2ecc71; font-weight: 700;"><i class="fa-solid fa-graduation-cap"></i> Tasa de Analfabetismo Baja: 5.41%</span>
-                        </div>
-
-                        <!-- Interior de la República -->
-                        <div>
-                            <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 8px; font-weight: 700;">
-                                <span style="color: var(--color-navy);"><i class="fa-solid fa-mountain-sun"></i> Interior de la República (21 Departamentos)</span>
-                                <span style="color: var(--color-gold, #b8860b);">77.91% del Padrón</span>
-                            </div>
-                            <div style="width: 100%; height: 14px; background: rgba(0,0,0,0.05); border-radius: 7px; overflow: hidden; margin-bottom: 6px;">
-                                <div style="width: 77.91%; height: 100%; background: var(--color-gold, #b8860b); border-radius: 7px;"></div>
-                            </div>
-                            <span style="font-size: 0.8rem; color: #e74c3c; font-weight: 700;"><i class="fa-solid fa-triangle-exclamation"></i> Tasa de Analfabetismo Alta: 20.47% (Brecha de 4x)</span>
-                        </div>
-                    </div>
-                    
-                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 30px;">
+                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
                         * La gran concentración del padrón electoral en el interior (7.9 M de ciudadanos) y su elevada tasa de analfabetismo (20.47%) justifican la descentralización de los programas de formación cívica y educación en el interior del país.
                     </p>
                 </div>
 
-                <!-- Subsección 4: Municipios de Máxima Prioridad (Alerta Cívica) -->
-                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm);">
-                    <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 3px solid #e74c3c; padding-left: 10px;">Municipios de Máxima Prioridad (Alerta de Inclusión)</h3>
-                    
-                    <p style="color: var(--color-text-muted); font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">
-                        Municipios con tasas extremas de analfabetismo (>40%) y alta proporción de población joven, prioritarios para el despliegue del Voluntariado Cívico Electoral bilingüe:
-                    </p>
-
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <!-- Municipio 1 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(231,76,60,0.02); border: 1px solid rgba(231,76,60,0.1); padding: 10px 15px; border-radius: var(--radius-sm);">
+                <!-- Subsección 2: Brecha de Analfabetismo por Género (Con información de Top 3 Departamentos de mayor analfabetismo y min-height 430px) -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); min-height: 430px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 3px solid var(--color-gold, #b8860b); padding-left: 10px;">Brecha de Analfabetismo por Género</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
                             <div>
-                                <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">San Andrés Sajcabajá</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Quiché</span>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px; font-weight: 700;">
+                                    <span style="color: var(--color-navy);"><i class="fa-solid fa-venus"></i> Mujeres analfabetas (1.16 M)</span>
+                                    <span style="color: #e74c3c;">21.33%</span>
+                                </div>
+                                <div style="width: 100%; height: 16px; background: rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
+                                    <div style="width: 21.33%; height: 100%; background: #e74c3c; border-radius: 8px;"></div>
+                                </div>
                             </div>
-                            <div style="text-align: right;">
-                                <span style="font-size: 0.95rem; font-weight: 800; color: #e74c3c; display: block;">52.33% Analf.</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted);">24.02% Jóvenes</span>
+
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 6px; font-weight: 700;">
+                                    <span style="color: var(--color-navy);"><i class="fa-solid fa-mars"></i> Hombres analfabetos (575k)</span>
+                                    <span style="color: var(--color-primary);">12.26%</span>
+                                </div>
+                                <div style="width: 100%; height: 16px; background: rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
+                                    <div style="width: 12.26%; height: 100%; background: var(--color-primary); border-radius: 8px;"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Municipio 2 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(231,76,60,0.02); border: 1px solid rgba(231,76,60,0.1); padding: 10px 15px; border-radius: var(--radius-sm);">
-                            <div>
-                                <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Joyabaj</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Quiché</span>
-                            </div>
-                            <div style="text-align: right;">
-                                <span style="font-size: 0.95rem; font-weight: 800; color: #e74c3c; display: block;">50.92% Analf.</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted);">25.71% Jóvenes</span>
-                            </div>
-                        </div>
-
-                        <!-- Municipio 3 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,118,204,0.01); border: 1px solid var(--color-border); padding: 10px 15px; border-radius: var(--radius-sm);">
-                            <div>
-                                <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Jocotán</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Chiquimula</span>
-                            </div>
-                            <div style="text-align: right;">
-                                <span style="font-size: 0.95rem; font-weight: 800; color: var(--color-navy); display: block;">43.40% Analf.</span>
-                                <span style="font-size: 0.72rem; color: var(--color-primary); font-weight: 700;">37.65% Jóvenes</span>
-                            </div>
-                        </div>
-
-                        <!-- Municipio 4 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,118,204,0.01); border: 1px solid var(--color-border); padding: 10px 15px; border-radius: var(--radius-sm);">
-                            <div>
-                                <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Senahú</span>
-                                <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Alta Verapaz</span>
-                            </div>
-                            <div style="text-align: right;">
-                                <span style="font-size: 0.95rem; font-weight: 800; color: var(--color-navy); display: block;">44.91% Analf.</span>
-                                <span style="font-size: 0.72rem; color: var(--color-primary); font-weight: 700;">34.15% Jóvenes</span>
-                            </div>
+                        <!-- Top 3 Departamentos de Mayor Analfabetismo -->
+                        <div style="margin-top: 20px; padding: 12px; background: rgba(184,134,11,0.02); border: 1px solid rgba(184,134,11,0.1); border-radius: var(--radius-sm); font-size: 0.82rem; line-height: 1.5;">
+                            <strong style="color: var(--color-navy); display: block; margin-bottom: 5px;"><i class="fa-solid fa-triangle-exclamation" style="color:var(--color-gold);"></i> Departamentos con Mayor Tasa de Analfabetismo:</strong>
+                            <ul style="margin: 0; padding-left: 15px; color: var(--color-text-main);">
+                                <li><strong>Quiché:</strong> 35.78%</li>
+                                <li><strong>Alta Verapaz:</strong> 33.81%</li>
+                                <li><strong>Huehuetenango:</strong> 26.93%</li>
+                            </ul>
                         </div>
                     </div>
+                    
+                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 15px; margin-bottom: 0;">
+                        * El analfabetismo es significativamente superior en el sector femenino empadronado. El Instituto Electoral prioriza metodologías de capacitación visual y auditiva no escritas para mitigar esta brecha.
+                    </p>
                 </div>
 
             </div>
 
-        </div>
-    </section>
+            <!-- FILA 2: DEPARTAMENTOS Y MUNICIPIOS PRIORITARIOS (ALTURAS UNIFICADAS A 480PX) -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1280px; margin: 40px auto 0; align-items: start;">
+                
+                <!-- Subsección 3: Focalización Territorial Prioritaria (Top Departamentos) -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); min-height: 480px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 3px solid var(--color-primary); padding-left: 10px;">Focalización Territorial Prioritaria (Top Departamentos)</h3>
+                        
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-navy); font-weight: 800;">
+                                    <th style="padding: 10px 5px;">Departamento</th>
+                                    <th style="padding: 10px 5px; text-align: right;">Empadronados</th>
+                                    <th style="padding: 10px 5px; text-align: right;">Analfabetismo</th>
+                                    <th style="padding: 10px 5px; text-align: right;">Jóvenes (18-30)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Guatemala</td>
+                                    <td style="padding: 10px 5px; text-align: right;">2,245,436</td>
+                                    <td style="padding: 10px 5px; text-align: right; color:#2ecc71; font-weight: 700;">5.41%</td>
+                                    <td style="padding: 10px 5px; text-align: right;">23.27%</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Huehuetenango</td>
+                                    <td style="padding: 10px 5px; text-align: right;">766,053</td>
+                                    <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">26.93%</td>
+                                    <td style="padding: 10px 5px; text-align: right; font-weight: 700;">27.51%</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Alta Verapaz</td>
+                                    <td style="padding: 10px 5px; text-align: right;">711,211</td>
+                                    <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">33.81%</td>
+                                    <td style="padding: 10px 5px; text-align: right; font-weight: 700; color: var(--color-primary);">31.69%</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">San Marcos</td>
+                                    <td style="padding: 10px 5px; text-align: right;">681,875</td>
+                                    <td style="padding: 10px 5px; text-align: right; color:var(--color-gold, #b8860b); font-weight: 700;">17.67%</td>
+                                    <td style="padding: 10px 5px; text-align: right;">25.29%</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 10px 5px; font-weight: 700; color: var(--color-navy);">Quiché</td>
+                                    <td style="padding: 10px 5px; text-align: right;">587,868</td>
+                                    <td style="padding: 10px 5px; text-align: right; color:#e74c3c; font-weight: 700;">35.78%</td>
+                                    <td style="padding: 10px 5px; text-align: right; font-weight: 700;">28.86%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        * Tabla de datos del Top 5 de departamentos del país, destacando de forma contrastada los focos con mayor analfabetismo y porcentaje de juventud (como Alta Verapaz y Quiché) para guiar los esfuerzos de capacitación y cobertura del Instituto Electoral.
+                    </p>
+                </div>
+
+                <!-- Subsección 4: Municipios de Máxima Prioridad (Alerta de Inclusión) (La descripción debe ir debajo del listado y tener min-height 480px) -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); min-height: 480px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 3px solid #e74c3c; padding-left: 10px;">Municipios de Máxima Prioridad (Alerta de Inclusión)</h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <!-- Municipio 1 -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(231,76,60,0.02); border: 1px solid rgba(231,76,60,0.1); padding: 10px 15px; border-radius: var(--radius-sm);">
+                                <div>
+                                    <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">San Andrés Sajcabajá</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Quiché</span>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span style="font-size: 0.95rem; font-weight: 800; color: #e74c3c; display: block;">52.33% Analf.</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted);">24.02% Jóvenes</span>
+                                </div>
+                            </div>
+
+                            <!-- Municipio 2 -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(231,76,60,0.02); border: 1px solid rgba(231,76,60,0.1); padding: 10px 15px; border-radius: var(--radius-sm);">
+                                <div>
+                                    <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Joyabaj</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Quiché</span>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span style="font-size: 0.95rem; font-weight: 800; color: #e74c3c; display: block;">50.92% Analf.</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted);">25.71% Jóvenes</span>
+                                </div>
+                            </div>
+
+                            <!-- Municipio 3 -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,118,204,0.01); border: 1px solid var(--color-border); padding: 10px 15px; border-radius: var(--radius-sm);">
+                                <div>
+                                    <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Jocotán</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Chiquimula</span>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span style="font-size: 0.95rem; font-weight: 800; color: var(--color-navy); display: block;">43.40% Analf.</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-primary); font-weight: 700;">37.65% Jóvenes</span>
+                                </div>
+                            </div>
+
+                            <!-- Municipio 4 -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(0,118,204,0.01); border: 1px solid var(--color-border); padding: 10px 15px; border-radius: var(--radius-sm);">
+                                <div>
+                                    <span style="font-weight: 800; color: var(--color-navy); font-size: 0.88rem;">Senahú</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-text-muted); display: block; text-transform: uppercase;">Alta Verapaz</span>
+                                </div>
+                                <div style="text-align: right;">
+                                    <span style="font-size: 0.95rem; font-weight: 800; color: var(--color-navy); display: block;">44.91% Analf.</span>
+                                    <span style="font-size: 0.72rem; color: var(--color-primary); font-weight: 700;">34.15% Jóvenes</span>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+
+                    <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        * Municipios con tasas extremas de analfabetismo (&gt;40%) y alta proporción de población joven, prioritarios para el despliegue del Voluntariado Cívico Electoral bilingüe.
+                    </p>
+                </div>
 
         </div>
     </section>
