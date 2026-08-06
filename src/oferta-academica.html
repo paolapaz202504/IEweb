@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Académica Virtual - Instituto Electoral TSE</title>
+    <meta name="description" content="Convocatorias académicas virtuales para colaboradores del TSE y la ciudadanía en general. Inscripciones abiertas agosto 2026.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS Principal Modular -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- TOP BAR DE ACCESO RÁPIDO -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <span><i class="fa-solid fa-phone"></i> PBX: +502 2378-3900</span>
+                <span><i class="fa-solid fa-envelope"></i> info@tse.org.gt</span>
+                <span><i class="fa-solid fa-location-dot"></i> Ciudad de Guatemala, Guatemala</span>
+            </div>
+            <div class="top-bar-links">
+                <a href="https://portalweb.tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-globe"></i> Portal TSE Principal</a>
+                <a href="https://tse.org.gt" target="_blank" class="badge-portal"><i class="fa-solid fa-building-columns"></i> Sitio Web Institucional</a>
+                <a href="https://aulavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-graduation-cap"></i> Aula Virtual</a>
+                <a href="https://bibliotecavirtual.tse.org.gt/" target="_blank" class="badge-portal"><i class="fa-solid fa-book-bookmark"></i> Biblioteca Virtual</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER SITE PRINCIPAL -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo_tse.png" alt="Logotipo Oficial TSE Guatemala" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">Instituto Electoral</span>
+                    <span class="logo-subtitle">Tribunal Supremo Electoral</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                
+                <div class="nav-item-dropdown">
+                    <a href="instituto.html" class="nav-link">Instituto Electoral <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="instituto.html#quienes-somos" class="dropdown-item">Quiénes Somos</a>
+                        <a href="instituto.html#mision-vision" class="dropdown-item">Misión, Visión y Valores</a>
+                        <a href="instituto.html#directorio" class="dropdown-item">Directorio Institucional</a>
+                    </div>
+                </div>
+
+                <a href="organigrama.html" class="nav-link">Organigrama</a>
+
+                <div class="nav-item-dropdown">
+                    <a href="coordinaciones.html" class="nav-link">Coordinaciones <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="coordinaciones.html#capacitacion" class="dropdown-item">Capacitación a la Ciudadanía</a>
+                        <a href="coordinaciones.html#formacion" class="dropdown-item">Programas de Formación</a>
+                        <a href="coordinaciones.html#administrativa" class="dropdown-item">Coordinación Administrativa</a>
+                    </div>
+                </div>
+
+                <a href="herramientas-web.html" class="nav-link">Herramientas Web</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HERO DE LA OFERTA ACADÉMICA -->
+    <div style="background: var(--grad-dark, linear-gradient(135deg, #0a2540 0%, #001020 100%)); color:#FFF; padding: 60px 0; text-align:center;">
+        <div class="container">
+            <span style="background: rgba(0, 201, 255, 0.2); color: var(--color-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0, 201, 255, 0.4); display: inline-block; margin-bottom: 15px;"><i class="fa-solid fa-graduation-cap"></i> Oferta Académica Virtual</span>
+            <h1 style="font-size: 2.5rem; font-weight: 800; margin: 0 0 10px; color:#FFF;">Programas de Formación - Agosto 2026</h1>
+            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                El Tribunal Supremo Electoral, a través de su Instituto Electoral, presenta su programa de capacitación virtual dirigida a la ciudadanía y a los colaboradores institucionales.
+            </p>
+        </div>
+    </div>
+
+    <!-- CONTENIDO ACADÉMICO -->
+    <section class="section" style="padding: 60px 0; background: #f8fafc;">
+        <div class="container">
+
+            <!-- PANELES DE CONVOCATORIA -->
+            <div style="max-width: 1280px; margin: 0 auto;">
+                
+                <!-- Botones de Navegación o Filtros -->
+                <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px;">
+                    <button onclick="switchConvocatoria('externa')" id="btn-conv-externa" style="padding: 12px 28px; border-radius: var(--radius-full); border: 2px solid var(--color-primary); background: var(--color-primary); color: #FFF; font-weight: 800; cursor: pointer; transition: all 0.3s;">
+                        <i class="fa-solid fa-globe"></i> Convocatoria Externa (Ciudadanía)
+                    </button>
+                    <button onclick="switchConvocatoria('interna')" id="btn-conv-interna" style="padding: 12px 28px; border-radius: var(--radius-full); border: 2px solid var(--color-border); background: #FFFFFF; color: var(--color-navy); font-weight: 800; cursor: pointer; transition: all 0.3s;">
+                        <i class="fa-solid fa-lock"></i> Convocatoria Interna (Colaboradores TSE)
+                    </button>
+                </div>
+
+                <!-- GRUPO 1: CONVOCATORIA EXTERNA -->
+                <div id="convocatoria-externa-container" style="display: grid; grid-template-columns: 1fr; gap: 30px;">
+                    
+                    <div style="background: rgba(0, 118, 204, 0.04); border-left: 5px solid var(--color-primary); padding: 20px 25px; border-radius: var(--radius-sm); margin-bottom: 10px;">
+                        <h3 style="color: var(--color-navy); font-weight: 800; margin-bottom: 5px;">Convocatoria Abierta a la Ciudadanía</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">Dirigida a ciudadanos en general, fiscales de partidos políticos, jóvenes, profesionales del derecho y personas interesadas en el fortalecimiento democrático y el régimen político electoral.</p>
+                    </div>
+
+                    <!-- Curso 1: Voluntariado -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center;">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_voluntariado_civico_electoral.png" alt="Voluntariado" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:#2ecc71; color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Inscripciones Abiertas</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Curso virtual "Voluntariado cívico electoral" ¡Incluye certificación oficial!</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Permite a los futuros voluntarios electorales, identificar y aplicar de manera ética y responsable los principios, roles y procedimientos del voluntariado cívico electoral, para contribuir activamente al fortalecimiento de la democracia y la transparencia de los procesos electorales en Guatemala, bajo la guía del Tribunal Supremo Electoral.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 20 de septiembre de 2026</div>
+                            </div>
+                            <a href="https://form.typeform.com/to/tTW6GwUo" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;"><i class="fa-solid fa-file-signature"></i> Inscribirse en Línea</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 2: Fiscales -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center;">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_rol_fiscales_organizaciones_politicas.png" alt="Fiscales" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:#2ecc71; color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Inscripciones Abiertas</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Curso virtual: Rol de los Fiscales de organizaciones políticas</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Fortalece el conocimiento de la ciudadanía en cuanto a la emisión del voto, tanto en el territorio nacional como en el extranjero, asimismo, preparando a todos aquellos que tengan participación activa en las bases de las organizaciones políticas, así como en las Juntas Departamentales y Municipales, Juntas Receptoras de Votos y en caso de discrepancia con los resultados de la votación, la utilización de medios de impugnación.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 20 de septiembre de 2026</div>
+                            </div>
+                            <a href="https://form.typeform.com/to/tTW6GwUo" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;"><i class="fa-solid fa-file-signature"></i> Inscribirse en Línea</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 3: Régimen Político -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center;">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_regimen_politico_electoral.png" alt="Régimen" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:#2ecc71; color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Inscripciones Abiertas</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Curso virtual: Introducción al régimen político electoral guatemalteco</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Conoce el marco normativo y los aspectos relevantes de la formación de partidos políticos, así como los procedimientos y actividades de las dependencias específicas del Tribunal Supremo Electoral con competencia sobre las organizaciones políticas; para el idóneo manejo de información electoral y su divulgación ante la sociedad guatemalteca.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 20 de septiembre de 2026</div>
+                            </div>
+                            <a href="https://form.typeform.com/to/Irb1JFLj" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;"><i class="fa-solid fa-file-signature"></i> Inscribirse en Línea</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 4: Actualización Derecho -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center;">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_derecho_electoral.png" alt="Derecho Electoral" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:#2ecc71; color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Inscripciones Abiertas</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Diplomado en Actualización al derecho electoral</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Fortalece el conocimiento electoral especializado y actualizado, sobre el marco jurídico del desarrollo del proceso electoral en Guatemala, delitos electorales y medios de impugnación en materia electoral, con proyección al proceso electoral 2027.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 18 de octubre de 2026</div>
+                            </div>
+                            <a href="https://form.typeform.com/to/aW2NTQCk" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;"><i class="fa-solid fa-file-signature"></i> Inscribirse en Línea</a>
+                        </div>
+                    </div>
+
+                    <!-- Curso 5: Democracia Juventud -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center;">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_construyendo_democracia_juventud.png" alt="Juventud" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:#2ecc71; color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Inscripciones Abiertas</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Curso virtual: Construyendo democracia desde la juventud</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Prepara a las juventudes para ser actores clave en la movilización ciudadana, el voluntariado cívico y la transformación política de cara al proceso electoral 2027, con un enfoque actual y moderno: jóvenes capaces de moverse con naturalidad entre el territorio físico y el espacio digital, integrando la agilidad tecnológica con la profundidad humana, el civismo, respeto y patriotismo.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 20 de septiembre de 2026</div>
+                            </div>
+                            <a href="https://form.typeform.com/to/vQId9Glm" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;"><i class="fa-solid fa-file-signature"></i> Inscribirse en Línea</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GRUPO 2: CONVOCATORIA INTERNA -->
+                <div id="convocatoria-interna-container" style="display: none; grid-template-columns: 1fr; gap: 30px;">
+                    
+                    <div style="background: rgba(184, 134, 11, 0.04); border-left: 5px solid var(--color-gold, #b8860b); padding: 20px 25px; border-radius: var(--radius-sm); margin-bottom: 10px;">
+                        <h3 style="color: var(--color-navy); font-weight: 800; margin-bottom: 5px;"><i class="fa-solid fa-shield-halved"></i> Exclusivo para Colaboradores del TSE</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5;">Dirigido exclusivamente al personal laboral, técnico y de apoyo del Tribunal Supremo Electoral de Guatemala para el cumplimiento de las metas y actualización del expediente de Recursos Humanos.</p>
+                    </div>
+
+                    <!-- Curso 1: Ética -->
+                    <div style="display: grid; grid-template-columns: 1.1fr 2fr; gap: 40px; background: #FFFFFF; border: 1px solid var(--color-border); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); align-items: center; border-top: 4px solid var(--color-gold, #b8860b);">
+                        <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="assets/images/oferta_academica/2026_08_etica.png" alt="Etica" style="width:100%; height:auto; display:block;"></div>
+                        <div>
+                            <span style="font-size:0.75rem; font-weight:800; background:var(--color-gold, #b8860b); color:#FFF; padding:2px 8px; border-radius:4px; text-transform:uppercase;">Convocatoria Interna</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.6rem; font-weight: 800; margin: 10px 0 15px; line-height: 1.3;">Curso virtual "Código de ética del TSE"</h3>
+                            <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                                Aborda el contenido del Código de Ética del TSE y brinda un acercamiento conceptual a los valores y principios éticos institucionales y el marco regulatorio del Tribunal Supremo Electoral. Un pilar formativo para todo el personal técnico, de apoyo e ingresantes.
+                            </p>
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; background:rgba(0,0,0,0.01); border:1px solid var(--color-border); padding:15px; border-radius:var(--radius-sm); margin-bottom:20px; font-size:0.85rem;">
+                                <div><strong><i class="fa-regular fa-calendar"></i> Inscripciones:</strong> Del 10 al 16 de agosto de 2026</div>
+                                <div><strong><i class="fa-solid fa-graduation-cap"></i> Desarrollo:</strong> Del 24 de agosto al 20 de septiembre de 2026</div>
+                            </div>
+                            <div style="background:rgba(184,134,11,0.02); border:1px solid rgba(184,134,11,0.15); padding:15px; border-radius:var(--radius-sm); font-size:0.82rem; margin-bottom:20px; line-height:1.4; color:var(--color-navy);">
+                                <strong><i class="fa-solid fa-triangle-exclamation"></i> Requerimiento Obligatorio de Recursos Humanos:</strong> Al aprobar este curso en la plataforma virtual, el colaborador del TSE debe descargar y enviar su diploma digitalizado a la Dirección de Recursos Humanos de forma inmediata.
+                            </div>
+                            <a href="https://form.typeform.com/to/t1W52jQA" target="_blank" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px; background:var(--color-gold, #b8860b); border-color:var(--color-gold, #b8860b);"><i class="fa-solid fa-id-badge"></i> Registrarse e Iniciar Sesión</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL REUTILIZABLE -->
+    <footer class="site-footer"></footer>
+
+    <!-- JS Principal (Clean Architecture ES6 Module) -->
+    <script type="module" src="js/main.js"></script>
+
+    <!-- JS Local de Navegación de Oferta Académica -->
+    <script>
+        function switchConvocatoria(type) {
+            const extContainer = document.getElementById('convocatoria-externa-container');
+            const intContainer = document.getElementById('convocatoria-interna-container');
+            const btnExt = document.getElementById('btn-conv-externa');
+            const btnInt = document.getElementById('btn-conv-interna');
+
+            if (type === 'externa') {
+                extContainer.style.display = 'grid';
+                intContainer.style.display = 'none';
+                
+                btnExt.style.background = 'var(--color-primary)';
+                btnExt.style.borderColor = 'var(--color-primary)';
+                btnExt.style.color = '#FFF';
+
+                btnInt.style.background = '#FFFFFF';
+                btnInt.style.borderColor = 'var(--color-border)';
+                btnInt.style.color = 'var(--color-navy)';
+            } else {
+                extContainer.style.display = 'none';
+                intContainer.style.display = 'grid';
+
+                btnInt.style.background = 'var(--color-gold, #b8860b)';
+                btnInt.style.borderColor = 'var(--color-gold, #b8860b)';
+                btnInt.style.color = '#FFF';
+
+                btnExt.style.background = '#FFFFFF';
+                btnExt.style.borderColor = 'var(--color-border)';
+                btnExt.style.color = 'var(--color-navy)';
+            }
+        }
+
+        // Script para detectar parámetros de grupo desde la URL y abrir la pestaña correspondiente
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const group = params.get('group');
+            if (group === 'interna') {
+                switchConvocatoria('interna');
+            } else {
+                switchConvocatoria('externa');
+            }
+        });
+    </script>
