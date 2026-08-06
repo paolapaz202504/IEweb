@@ -52,7 +52,7 @@ export function renderFooter() {
                 <h4 class="footer-col-title">Contacto</h4>
                 <div class="footer-contact-item">
                     <i class="fa-solid fa-location-dot" style="margin-top:3px; color: var(--color-cyan);"></i>
-                    <span>6a. Avenida 0-32 Zona 2, Ciudad de Guatemala, Guatemala</span>
+                    <span>6a. Avenida 1-35 Zona 2, Ciudad de Guatemala, Guatemala</span>
                 </div>
                 <div class="footer-contact-item">
                     <i class="fa-solid fa-phone" style="color: var(--color-cyan);"></i>
@@ -70,4 +70,58 @@ export function renderFooter() {
             <span>Normas y Procedimientos conforme al Acuerdo No. 79-2026.</span>
         </div>
     `;
+
+    // LÓGICA DEL CONTADOR DE VISITAS PERSISTENTE (LOCALSTORAGE)
+    // LÓGICA DEL CONTADOR DE VISITAS GLOBAL Y REAL (COUNTAPI)
+    // Usamos el namespace del dominio del Instituto Electoral de Guatemala para garantizar unicidad en la API pública.
+    const namespace = "tse_instituto_electoral_guatemala";
+    const key = "visitas_totales";
+    
+    // Función auxiliar para actualizar los elementos en el DOM
+    const updateCountersDOM = (val) => {
+        const topCounters = document.querySelectorAll('.site-visitor-counter-value');
+        topCounters.forEach(el => {
+            el.textContent = parseInt(val, 10).toLocaleString('es-GT');
+        });
+    };
+
+    // Para evitar inflar las estadísticas en recargas rápidas del mismo usuario
+    const isNewSession = !sessionStorage.getItem('tse_visit_counted');
+    const apiUrl = isNewSession 
+        ? `https://api.countapi.xyz/hit/${namespace}/${key}`
+        : `https://api.countapi.xyz/get/${namespace}/${key}`;
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                // Si el contador no ha sido creado en el servidor, intentamos inicializarlo con un valor inicial de 1
+                if (response.status === 404 && isNewSession) {
+                    return fetch(`https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=1`)
+                        .then(res => res.json());
+                }
+                throw new Error("Error en la respuesta de CountAPI");
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (isNewSession) {
+                sessionStorage.setItem('tse_visit_counted', 'true');
+            }
+            updateCountersDOM(data.value);
+        })
+        .catch(err => {
+            console.warn("CountAPI temporalmente no disponible, usando fallback local:", err);
+            // Fallback en localStorage local si el servicio externo falla o está offline
+            try {
+                let visits = parseInt(localStorage.getItem('tse_inst_electoral_visits') || "1", 10);
+                if (isNewSession) {
+                    visits += 1;
+                    localStorage.setItem('tse_inst_electoral_visits', visits);
+                    sessionStorage.setItem('tse_visit_counted', 'true');
+                }
+                updateCountersDOM(visits);
+            } catch (e) {
+                updateCountersDOM("1");
+            }
+        });
 }
