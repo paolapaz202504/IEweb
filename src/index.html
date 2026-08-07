@@ -580,17 +580,17 @@
                 <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
                     <div>
                         <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
-                            <img src="assets/images/slider_capacitacion.jpg" alt="Talleres de Capacitación">
-                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Capacitación</span>
+                            <img src="./assets/images/ciudadania-de-las-mujeres/foto1.png" alt="Ciudadanía de las Mujeres">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: linear-gradient(135deg, #ec008c, #fc6767); color: #FFF; padding: 3px 8px; border-radius: 4px;">Capacitación Virtual</span>
                         </div>
                         <div style="padding: 15px;">
-                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 02 de Agosto, 2026</span>
-                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Instituto Electoral Lanza Nuevos Talleres de Capacitación Cívica 2026</h3>
-                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Se abren las inscripciones para los programas de formación dirigidos a la juventud guatemalteca sobre cultura democrática.</p>
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> Agosto, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Ciudadanía de las Mujeres</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Un programa formativo del Instituto Electoral del TSE sobre Autoestima, Empoderamiento y Liderazgo.</p>
                         </div>
                     </div>
                     <div style="padding: 0 15px 15px;">
-                        <button onclick="openVceModal('talleres-capacitacion-2026.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                        <button onclick="openVceModal('ciudadania-de-las-mujeres.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
                             Leer artículo <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -705,7 +705,7 @@
 
     <!-- MODAL ÚNICO DE LECTURA DE ARTÍCULOS DINÁMICO -->
     <div id="vce-article-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
-        <div style="max-width: 800px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
+        <div style="max-width: 1200px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
             <button onclick="closeVceModal()" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
             <div id="vce-modal-content" style="padding: 40px;">
                 <!-- Contenido cargado dinámicamente -->
