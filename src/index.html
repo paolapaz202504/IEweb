@@ -575,85 +575,124 @@
                 <h2 class="section-title">Últimas Noticias y Videos</h2>
             </div>
 
-            <div class="card-grid">
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
                 <!-- News Item 1 -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/slider_capacitacion.jpg" alt="Talleres de Capacitación">
-                        <span class="news-badge">Capacitación</span>
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/slider_capacitacion.jpg" alt="Talleres de Capacitación">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Capacitación</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 02 de Agosto, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Instituto Electoral Lanza Nuevos Talleres de Capacitación Cívica 2026</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Se abren las inscripciones para los programas de formación dirigidos a la juventud guatemalteca sobre cultura democrática.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 02 de Agosto, 2026</span>
-                        <h3 class="news-title">Instituto Electoral Lanza Nuevos Talleres de Capacitación Cívica 2026</h3>
-                        <p class="news-excerpt">Se abren las inscripciones para los programas de formación dirigidos a la juventud guatemalteca sobre cultura democrática.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('talleres-capacitacion-2026.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- News Item 2 (Video) -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/dialogos_juveniles/foto1.jpg" alt="Voluntariado Cívico">
-                        <span class="news-badge" style="background: var(--grad-gold); color: var(--color-navy);">Voluntariado (VCE)</span>
-                        
+                <!-- News Item 2 -->
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/dialogos_juveniles/foto1.jpg" alt="Diálogos sobre Participación Ciudadana">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Encuentros</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> Reciente</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Diálogos sobre Participación Ciudadana</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Taller formativo y de diálogo regional con jóvenes del departamento de Totonicapán.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 28 de Julio, 2026</span>
-                        <h3 class="news-title">Diálogos sobre Participación Ciudadana</h3>
-                        <p class="news-excerpt">Taller formativo y de diálogo regional con jóvenes del departamento de Totonicapán.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('dialogos-juveniles.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
-                    
                 </div>
 
                 <!-- News Item 3 -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/slider_aula_virtual.jpg" alt="Aula Virtual">
-                        <span class="news-badge">Aula Virtual</span>
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/slider_aula_virtual.jpg" alt="Aula Virtual">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Aula Virtual</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 15 de Julio, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Nuevos Módulos Académicos Habilitados en el Aula Virtual TSE</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Aprende sobre legislación electoral, civismo e historia democrática desde la plataforma.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 15 de Julio, 2026</span>
-                        <h3 class="news-title">Nuevos Módulos Académicos Habilitados en el Aula Virtual TSE</h3>
-                        <p class="news-excerpt">Aprende sobre legislación electoral, civismo e historia democrática desde la plataforma aulavirtual.tse.org.gt.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('nuevos-modulos-aula-virtual.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
                 <!-- News Item 4 -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/news_biblioteca.jpg" alt="Biblioteca Virtual">
-                        <span class="news-badge" style="background: var(--grad-gold); color: var(--color-navy);">Biblioteca Virtual</span>
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/news_biblioteca.jpg" alt="Biblioteca Virtual">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Biblioteca Virtual</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 10 de Julio, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Biblioteca Virtual Publica Nuevos Manuales e Instructivos Electorales</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">La Biblioteca Virtual (bibliotecavirtual.tse.org.gt) habilita para descarga la colección oficial.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 10 de Julio, 2026</span>
-                        <h3 class="news-title">Biblioteca Virtual Publica Nuevos Manuales e Instructivos Electorales</h3>
-                        <p class="news-excerpt">La Biblioteca Virtual (bibliotecavirtual.tse.org.gt) habilita para descarga la colección del Acuerdo No. 79-2026.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('nuevos-manuales-biblioteca.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
-                <!-- News Item 5 (Video) -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/news_diplomado.jpg" alt="Educación Democrática">
-                        <span class="news-badge video"><i class="fa-solid fa-play"></i> Video</span>
-                        <button class="video-play-btn" aria-label="Reproducir Video"><i class="fa-solid fa-play fa-lg"></i></button>
+                <!-- News Item 5 -->
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/conversatorios_verapaz/foto1.jpg" alt="Conversatorios del TSE">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Conversatorios</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 28 de Abril, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Conversatorios del TSE reúnen a cerca de mil jóvenes</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Encuentros en Retalhuleu, Alta y Baja Verapaz para fortalecer la participación ciudadana y el liderazgo juvenil.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 02 de Julio, 2026</span>
-                        <h3 class="news-title">Resumen Audiovisual: Jornadas de Educación Democrática</h3>
-                        <p class="news-excerpt">Video resumen con el testimonio de participantes y docentes en las actividades regionales del Instituto Electoral.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('conversatorios-verapaz.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
 
                 <!-- News Item 6 -->
-                <div class="news-card">
-                    <div class="news-media">
-                        <img src="assets/images/slider_capacitacion.jpg" alt="Diplomado Electoral">
-                        <span class="news-badge">Diplomados</span>
+                <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                    <div>
+                        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                            <img src="assets/images/slider_capacitacion.jpg" alt="Diplomado Electoral">
+                            <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Diplomados</span>
+                        </div>
+                        <div style="padding: 15px;">
+                            <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 25 de Junio, 2026</span>
+                            <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Convocatoria Abierta para el Diplomado en Derecho y Procesos Electorales</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">El Instituto Electoral invita a funcionarios, estudiantes y sociedad civil a inscribirse en la nueva cohorte académica.</p>
+                        </div>
                     </div>
-                    <div class="news-body">
-                        <span class="news-date"><i class="fa-regular fa-calendar"></i> 25 de Junio, 2026</span>
-                        <h3 class="news-title">Convocatoria Abierta para el Diplomado en Derecho y Procesos Electorales</h3>
-                        <p class="news-excerpt">El Instituto Electoral invita a funcionarios, estudiantes y sociedad civil a inscribirse en la nueva cohorte académica.</p>
+                    <div style="padding: 0 15px 15px;">
+                        <button onclick="openVceModal('convocatoria-diplomado-electoral.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            Leer artículo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -663,6 +702,50 @@
 
     <!-- FOOTER INSTITUCIONAL REUTILIZABLE -->
     <footer class="site-footer"></footer>
+
+    <!-- MODAL ÚNICO DE LECTURA DE ARTÍCULOS DINÁMICO -->
+    <div id="vce-article-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
+        <div style="max-width: 800px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
+            <button onclick="closeVceModal()" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
+            <div id="vce-modal-content" style="padding: 40px;">
+                <!-- Contenido cargado dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Inline para control del Modal Dinámico -->
+    <script>
+        function openVceModal(articleFileName) {
+            const modal = document.getElementById('vce-article-modal');
+            const contentContainer = document.getElementById('vce-modal-content');
+            if (modal && contentContainer) {
+                contentContainer.innerHTML = '<div style="text-align:center; padding: 40px;"><i class="fa-solid fa-spinner fa-spin fa-2xl" style="color:var(--color-primary);"></i><p style="margin-top:15px; color:var(--color-text-muted);">Cargando artículo...</p></div>';
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                
+                fetch('./articulos/' + articleFileName)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Error al cargar el artículo');
+                        return response.text();
+                    })
+                    .then(html => {
+                        contentContainer.innerHTML = html;
+                    })
+                    .catch(error => {
+                        contentContainer.innerHTML = '<div style="text-align:center; color:#e74c3c; padding: 40px;"><i class="fa-solid fa-triangle-exclamation fa-2xl"></i><p style="margin-top:15px;">No se pudo cargar el artículo.</p></div>';
+                        console.error(error);
+                    });
+            }
+        }
+
+        function closeVceModal() {
+            const modal = document.getElementById('vce-article-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
 
     <!-- JS Principal (Clean Architecture ES6 Module) -->
     <script type="module" src="js/main.js"></script>

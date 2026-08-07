@@ -434,8 +434,11 @@
                 </div>
 
                 <p style="color: var(--color-text-muted); font-size: 1.05rem; margin-bottom: 35px; line-height: 1.6; max-width: 1000px;">
-                                 <!-- Grid de Artículos (Últimas Noticias - 4 Columnas) -->
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                    Infórmate sobre las actividades, eventos de capacitación cívica, diálogos regionales y el impacto del voluntariado juvenil en la democracia del país.
+                </p>
+
+                <!-- Grid de Artículos (Últimas Noticias - Máximo 3 Columnas) -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
                     
                     <!-- Artículo 1: Mes Patrio -->
                     <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
@@ -451,7 +454,7 @@
                             </div>
                         </div>
                         <div style="padding: 0 15px 15px;">
-                            <button onclick="openVceModal('modal-mes-patrio')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            <button onclick="openVceModal('mes-patrio.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
                                 Leer artículo <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -471,7 +474,7 @@
                             </div>
                         </div>
                         <div style="padding: 0 15px 15px;">
-                            <button onclick="openVceModal('modal-dialogos-regionales')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            <button onclick="openVceModal('dialogos-regionales.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
                                 Leer artículo <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -491,7 +494,7 @@
                             </div>
                         </div>
                         <div style="padding: 0 15px 15px;">
-                            <button onclick="openVceModal('modal-dialogos-juveniles')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            <button onclick="openVceModal('dialogos-juveniles.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
                                 Leer artículo <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -511,238 +514,70 @@
                             </div>
                         </div>
                         <div style="padding: 0 15px 15px;">
-                            <button onclick="openVceModal('modal-politica-juventud')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                            <button onclick="openVceModal('politica-nacional-juventud.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
                                 Leer artículo <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
                     </div>
 
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- MODALES DE ARTÍCULOS COMPLETOS -->
-    
-    <!-- Modal 1: Mes Patrio -->
-    <div id="modal-mes-patrio" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
-        <div style="max-width: 800px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
-            <button onclick="closeVceModal('modal-mes-patrio')" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
-            <div style="padding: 40px;">
-                <span style="font-weight: 800; background: var(--color-primary); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">Artículo de Divulgación</span>
-                <h2 style="color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">La Juventud y el Compromiso Cívico en el Mes Patrio</h2>
-                <span style="font-size: 0.9rem; color: var(--color-text-muted); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Publicado en Septiembre, 2026</span>
-                
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                    El mes de septiembre representa para Guatemala un espacio de civismo y festividad cívica. Históricamente, el Tribunal Supremo Electoral y el Instituto de Formación Cívica y Política han promovido la participación juvenil para ir más allá de la antorcha cívica tradicional, canalizando esa energía en un rol activo y reflexivo en el fortalecimiento democrático.
-                </p>
-
-                <!-- Galería fotográfica del mes patrio -->
-                <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Galería Fotográfica del Proyecto</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/mes_patrio/foto1.jpg" alt="Mes patrio actividad 1" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/mes_patrio/foto2.jpg" alt="Mes patrio actividad 2" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/mes_patrio/foto3.jpg" alt="Mes patrio actividad 3" style="width:100%; height:130px; object-fit:cover;"></div>
-                </div>
-
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 0;">
-                    Durante este mes, los voluntarios cívico electorales organizan marchas de civismo, conferencias educativas en centros de estudio de nivel medio y superior, y encuentros departamentales. De esta manera, el mes de la patria se convierte en una plataforma de educación ciudadana activa que sienta las bases para el voto reflexivo e informado de las nuevas generaciones.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2: Diálogos Regionales -->
-    <div id="modal-dialogos-regionales" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
-        <div style="max-width: 900px; margin: 40px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
-            <button onclick="closeVceModal('modal-dialogos-regionales')" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
-            <div style="padding: 40px;">
-                <span style="font-weight: 800; background: var(--color-primary); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">Plan de Acción del TSE</span>
-                <h2 style="color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">Diálogos Regionales de la Política de Juventud del TSE</h2>
-                <span style="font-size: 0.9rem; color: var(--color-text-muted); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Publicado en Julio, 2026</span>
-                
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
-                    Los <strong>Diálogos Regionales de la Política de Juventud del Tribunal Supremo Electoral</strong> representan la principal herramienta participativa de consulta juvenil a nivel territorial. Su objetivo es recolectar las inquietudes, realidades y propuestas de los jóvenes de los 22 departamentos del país para convertirlas en estrategias que promuevan la participación cívica activa y disminuyan el abstencionismo en los comicios.
-                </p>
-
-                <!-- Galería Interactiva con Filtro por Departamento (Clean Inline JS) -->
-                <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Galería de Fotos por Departamento</h3>
-                <div style="margin-bottom: 20px;">
-                    <label for="dept-select" style="font-size: 0.9rem; font-weight: 700; color: var(--color-navy); margin-right: 10px;">Selecciona el departamento:</label>
-                    <select id="dept-select" onchange="filterVceGallery(this.value)" style="padding: 8px 16px; border-radius: var(--radius-sm); border: 1px solid var(--color-border); color: var(--color-navy); font-weight: 700;">
-                        <option value="alta_verapaz">Alta Verapaz</option>
-                        <option value="escuintla">Escuintla</option>
-                        <option value="guatemala">Guatemala</option>
-                        <option value="huehuetenango">Huehuetenango</option>
-                        <option value="izabal">Izabal</option>
-                        <option value="jalapa">Jalapa</option>
-                        <option value="quetalzatenango">Quetzaltenango</option>
-                        <option value="quiche">Quiché</option>
-                        <option value="san_marcos">San Marcos</option>
-                    </select>
-                </div>
-                
-                <!-- Contenedor de la Galería Departamental -->
-                <div id="vce-dept-gallery-container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 30px;">
-                    <!-- Se carga dinámicamente con JS inline -->
-                </div>
-
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 0;">
-                    Gracias a estas consultas del TSE, el Instituto Electoral valida técnicamente los programas y talleres educativos para la juventud de forma coordinada con la sociedad civil, asegurando que se adapten con pertinencia cultural e inclusión lingüística a cada uno de los municipios de la República.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: Diálogos Juveniles Totonicapán -->
-    <div id="modal-dialogos-juveniles" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
-        <div style="max-width: 800px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
-            <button onclick="closeVceModal('modal-dialogos-juveniles')" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
-            <div style="padding: 40px;">
-                <span style="font-weight: 800; background: var(--color-primary); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">Encuentro en Totonicapán</span>
-                <h2 style="color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">Encuentro Diálogos Juveniles sobre Participación Ciudadana</h2>
-                <span style="font-size: 0.9rem; color: var(--color-text-muted); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Evento de Participación Democrática</span>
-                
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
-                    En el departamento de <strong>Totonicapán</strong>, el Tribunal Supremo Electoral de Guatemala (TSE) coordinó y llevó a cabo con éxito el encuentro de **Diálogos Juveniles sobre Participación Ciudadana**. La actividad contó con la asistencia y participación activa del magistrado <strong>Kelvin</strong>, quien compartió con los jóvenes voluntarios sobre la trascendencia de la educación electoral y la integración de la juventud organizada.
-                </p>
-
-                <!-- Galería del encuentro Totonicapán -->
-                <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Artes y Fotografías del Evento</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto1.jpg" alt="Encuentro Totonicapán 1" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto2.jpg" alt="Encuentro Totonicapán 2" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto3.jpg" alt="Encuentro Totonicapán 3" style="width:100%; height:130px; object-fit:cover;"></div>
-                </div>
-
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                    Durante la jornada, los jóvenes dialogaron sobre el papel transformador de la juventud y propusieron mecanismos locales para motivar el empadronamiento de los nuevos electores y fortalecer los comités comunitarios de civismo.
-                </p>
-
-                <!-- Enlace de consulta al post oficial de Facebook -->
-                <div style="text-align: center;">
-                    <a href="https://www.facebook.com/tseguatemala/posts/en-totonicap%C3%A1n-el-tseguatemala-realiz%C3%B3-el-encuentro-di%C3%A1logos-juveniles-sobre-par/1450070503820079/" target="_blank" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; padding: 14px 24px; border-radius: var(--radius-full); border: 1px solid var(--color-navy); color: var(--color-navy); background: #FFFFFF; text-decoration: none; transition: all 0.3s;" onmouseenter="this.style.background='var(--color-navy)'; this.style.color='#FFFFFF';" onmouseleave="this.style.background='#FFFFFF'; this.style.color='var(--color-navy)';">
-                        <i class="fa-brands fa-facebook"></i> Ver Publicación Oficial en Facebook
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4: Política Nacional de la Juventud -->
-    <div id="modal-politica-juventud" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
-        <div style="max-width: 900px; margin: 40px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
-            <button onclick="closeVceModal('modal-politica-juventud')" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
-            <div style="padding: 40px;">
-                <span style="font-weight: 800; background: var(--color-primary); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">Estrategia Gubernamental y Retos</span>
-                <h2 style="color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">Política Nacional de la Juventud 2025-2040</h2>
-                <span style="font-size: 0.9rem; color: var(--color-text-muted); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Aprobado bajo Acuerdo Gubernativo</span>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; margin-bottom: 25px; align-items: start;">
-                    <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
-                        <img src="./assets/images/politica_nacional_juventud/foto1.png" alt="Política Nacional de la Juventud 2025-2040" style="width: 100%; height: auto; display: block;">
-                    </div>
-                    <div>
-                        <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin: 0 0 15px 0;">
-                            La **Política Nacional de la Juventud (PNJ) 2025-2040** del Gobierno de Guatemala es la principal directriz estratégica de desarrollo integral orientada a guiar las acciones del Estado para la población de **13 a 30 años** en los próximos 15 años. 
-                        </p>
-                        <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin: 0;">
-                            Su marco metodológico incluye un abordaje intersectorial encabezado por el Ministerio de Desarrollo Social (MIDES) y coordinado por el Consejo Nacional de la Juventud (CONJUVE).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Retos de la Política Nacional de Juventud del Gobierno -->
-                <div style="background: rgba(10,37,64,0.015); border: 1px solid var(--color-border); padding: 25px; border-radius: var(--radius-md); margin-bottom: 25px;">
-                    <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; display:flex; align-items:center; gap:8px;"><i class="fa-solid fa-bullseye" style="color: var(--color-primary);"></i> Retos Prioritarios para Incrementar la Participación</h3>
-                    <p style="color: var(--color-text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
-                        Para asegurar una ciudadanía plena y representativa, la política nacional destaca los siguientes desafíos claves en materia cívico-electoral:
-                    </p>
-                    
-                    <ul style="list-style: none; padding: 0; margin: 0 0 25px 0; display: flex; flex-direction: column; gap: 12px; font-size: 0.92rem; color: var(--color-text-main);">
-                        <li style="display: flex; gap: 8px;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--color-primary); margin-top: 3px;"></i> <span><strong>Apatía y desconfianza:</strong> Superar el desinterés cívico originado por la falta de representatividad histórica en los espacios de toma de decisiones.</span></li>
-                        <li style="display: flex; gap: 8px;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--color-primary); margin-top: 3px;"></i> <span><strong>Educación y Formación Cívica:</strong> Extender las metodologías formativas en democracia a las juventudes que habitan en zonas rurales del interior del país.</span></li>
-                        <li style="display: flex; gap: 8px;"><i class="fa-solid fa-triangle-exclamation" style="color: var(--color-primary); margin-top: 3px;"></i> <span><strong>Brecha de Inclusión:</strong> Garantizar la adaptabilidad de los programas de participación con pertenencia cultural, equidad de género e inclusión lingüística.</span></li>
-                    </ul>
-
-                    <!-- Gráficos Estadísticos Simples como Indicadores en CSS/HTML -->
-                    <h4 style="color: var(--color-navy); font-weight: 800; font-size: 1rem; margin-bottom: 15px;"><i class="fa-solid fa-chart-simple"></i> Indicadores de Participación Cívica y Demográfica:</h4>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div style="background:#FFF; padding:15px; border-radius: var(--radius-sm); border:1px solid var(--color-border); text-align:center;">
-                            <span style="font-size: 2.2rem; font-weight:800; color:var(--color-primary); display:block;">33%</span>
-                            <span style="font-size:0.82rem; color:var(--color-text-muted); font-weight:700;">De la Población Total de Guatemala son Jóvenes</span>
+                    <!-- Artículo 5: Conversatorios Verapaz -->
+                    <div class="news-card" style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 12px rgba(10,37,64,0.04); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;" onmouseenter="this.style.transform='translateY(-4px)'" onmouseleave="this.style.transform='translateY(0)'">
+                        <div>
+                            <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; background: var(--color-navy);">
+                                <img src="./assets/images/conversatorios_verapaz/foto1.jpg" alt="Conversatorios del TSE en Retalhuleu y Verapaces" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                                <span style="position: absolute; top: 12px; left: 12px; font-size: 0.72rem; font-weight: 800; background: var(--color-primary); color: #FFF; padding: 3px 8px; border-radius: 4px;">Conversatorios</span>
+                            </div>
+                            <div style="padding: 15px;">
+                                <span style="font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-bottom: 6px;"><i class="fa-regular fa-calendar"></i> 28 de Abril, 2026</span>
+                                <h3 style="color: var(--color-navy); font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; line-height: 1.3;">Conversatorios del TSE reúnen a cerca de mil jóvenes</h3>
+                                <p style="color: var(--color-text-muted); font-size: 0.82rem; line-height: 1.4; margin: 0;">Encuentros en Retalhuleu, Alta y Baja Verapaz para fortalecer la participación ciudadana y el liderazgo juvenil.</p>
+                            </div>
                         </div>
-                        <div style="background:#FFF; padding:15px; border-radius: var(--radius-sm); border:1px solid var(--color-border); text-align:center;">
-                            <span style="font-size: 2.2rem; font-weight:800; color:#e74c3c; display:block;">42%</span>
-                            <span style="font-size:0.82rem; color:var(--color-text-muted); font-weight:700;">Abstencionismo Juvenil Estimado en Votos Primarios</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Botón de Descarga del Documento del Drive -->
-                <div style="text-align: center;">
-                    <a href="https://drive.google.com/drive/folders/1m-GhQLx8SA4L7EPtdXrbW6sDEvfFB-9w" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; background: var(--grad-fresh); color: var(--color-navy); font-weight: 800; padding: 14px 28px; border-radius: var(--radius-full); text-decoration: none; box-shadow: var(--shadow-glow);">
-                        <i class="fa-solid fa-download"></i> Descargar Documento Diálogos Regionales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: Diálogos Juveniles Totonicapán -->
-    <div id="modal-dialogos-juveniles" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
+                        <div style="padding: 0 15px 15px;">
+                            <button onclick="openVceModal('conversatorios-verapaz.html')" style="background: none; border: none; padding: 0; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseenter="this.style.color='var(--color-navy)'" onmouseleave="this.style.color='var(--color-primary)'">
+                                Leer artículo <i class="f    <!-- MODAL ÚNICO DE LECTURA DE ARTÍCULOS DINÁMICO -->
+    <div id="vce-article-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.75); z-index: 9999; overflow-y: auto; backdrop-filter: blur(4px);">
         <div style="max-width: 800px; margin: 50px auto; background: #FFFFFF; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--color-border); position: relative;">
-            <button onclick="closeVceModal('modal-dialogos-juveniles')" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
-            <div style="padding: 40px;">
-                <span style="font-weight: 800; background: var(--color-primary); color: #FFF; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase;">Encuentro en Totonicapán</span>
-                <h2 style="color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 15px 0 10px; line-height: 1.2;">Encuentro Diálogos Juveniles sobre Participación Ciudadana</h2>
-                <span style="font-size: 0.9rem; color: var(--color-text-muted); display: block; margin-bottom: 25px;"><i class="fa-regular fa-calendar"></i> Evento de Participación Democrática</span>
-                
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
-                    En el departamento de <strong>Totonicapán</strong>, el Tribunal Supremo Electoral de Guatemala (TSE) coordinó y llevó a cabo con éxito el encuentro de **Diálogos Juveniles sobre Participación Ciudadana**. La actividad contó con la asistencia y participación activa del magistrado <strong>Kelvin</strong>, quien compartió con los jóvenes voluntarios sobre la trascendencia de la educación electoral y la integración de la juventud organizada.
-                </p>
-
-                <!-- Galería del encuentro Totonicapán -->
-                <h3 style="color: var(--color-navy); font-size: 1.25rem; font-weight: 800; margin-bottom: 15px; border-bottom: 2px solid var(--color-border); padding-bottom: 8px;">Artes y Fotografías del Evento</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px;">
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto1.jpg" alt="Encuentro Totonicapán 1" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto2.jpg" alt="Encuentro Totonicapán 2" style="width:100%; height:130px; object-fit:cover;"></div>
-                    <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);"><img src="./assets/images/dialogos_juveniles/foto3.jpg" alt="Encuentro Totonicapán 3" style="width:100%; height:130px; object-fit:cover;"></div>
-                </div>
-
-                <p style="color: var(--color-text-main); font-size: 1.05rem; line-height: 1.7; margin-bottom: 25px;">
-                    Durante la jornada, los jóvenes dialogaron sobre el papel transformador de la juventud y propusieron mecanismos locales para motivar el empadronamiento de los nuevos electores y fortalecer los comités comunitarios de civismo.
-                </p>
-
-                <!-- Enlace de consulta al post oficial de Facebook -->
-                <div style="text-align: center;">
-                    <a href="https://www.facebook.com/tseguatemala/posts/en-totonicap%C3%A1n-el-tseguatemala-realiz%C3%B3-el-encuentro-di%C3%A1logos-juveniles-sobre-par/1450070503820079/" target="_blank" class="btn-outline" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.95rem; padding: 14px 24px; border-radius: var(--radius-full); border: 1px solid var(--color-navy); color: var(--color-navy); background: #FFFFFF; text-decoration: none; transition: all 0.3s;" onmouseenter="this.style.background='var(--color-navy)'; this.style.color='#FFFFFF';" onmouseleave="this.style.background='#FFFFFF'; this.style.color='var(--color-navy)';">
-                        <i class="fa-brands fa-facebook"></i> Ver Publicación Oficial en Facebook
-                    </a>
-                </div>
+            <button onclick="closeVceModal()" style="position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; border-radius: 50%; border: none; background: rgba(10,37,64,0.06); color: var(--color-navy); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.3s;" onmouseenter="this.style.background='var(--color-primary)'; this.style.color='#FFF';" onmouseleave="this.style.background='rgba(10,37,64,0.06)'; this.style.color='var(--color-navy)';"><i class="fa-solid fa-xmark"></i></button>
+            <div id="vce-modal-content" style="padding: 40px;">
+                <!-- Contenido cargado dinámicamente -->
             </div>
         </div>
     </div>
 
     <!-- JS INLINE PARA MODALES Y GALERÍA INTERACTIVA DE DIÁLOGOS REGIONALES -->
     <script>
-        // Funciones globales para abrir y cerrar modales de artículos
-        function openVceModal(id) {
-            const modal = document.getElementById(id);
-            if (modal) {
+        // Funciones globales para abrir y cerrar modales de artículos dinámicos
+        function openVceModal(articleFileName) {
+            const modal = document.getElementById('vce-article-modal');
+            const contentContainer = document.getElementById('vce-modal-content');
+            if (modal && contentContainer) {
+                contentContainer.innerHTML = '<div style="text-align:center; padding: 40px;"><i class="fa-solid fa-spinner fa-spin fa-2xl" style="color:var(--color-primary);"></i><p style="margin-top:15px; color:var(--color-text-muted);">Cargando artículo...</p></div>';
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Evitar scroll del fondo
                 
-                // Si abrimos diálogos regionales, inicializar su galería departamental
-                if (id === 'modal-dialogos-regionales') {
-                    filterVceGallery('alta_verapaz');
-                }
+                fetch('./articulos/' + articleFileName)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Error al cargar el artículo');
+                        return response.text();
+                    })
+                    .then(html => {
+                        contentContainer.innerHTML = html;
+                        
+                        // Si abrimos diálogos regionales, inicializar su galería departamental
+                        if (articleFileName === 'dialogos-regionales.html') {
+                            setTimeout(() => filterVceGallery('alta_verapaz'), 100);
+                        }
+                    })
+                    .catch(error => {
+                        contentContainer.innerHTML = '<div style="text-align:center; color:#e74c3c; padding: 40px;"><i class="fa-solid fa-triangle-exclamation fa-2xl"></i><p style="margin-top:15px;">No se pudo cargar el artículo.</p></div>';
+                        console.error(error);
+                    });
             }
         }
         
-        function closeVceModal(id) {
-            const modal = document.getElementById(id);
+        function closeVceModal() {
+            const modal = document.getElementById('vce-article-modal');
             if (modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Habilitar scroll del fondo
@@ -833,6 +668,17 @@
                 img.src = imgUrl;
                 img.alt = `Foto ${index + 1} de Diálogos Regionales en ${dept}`;
                 img.style.position = 'absolute';
+                img.style.top = '0';
+                img.style.left = '0';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                
+                item.appendChild(img);
+                container.appendChild(item);
+            });
+        }
+    </script>on = 'absolute';
                 img.style.top = '0';
                 img.style.left = '0';
                 img.style.width = '100%';
