@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- CSS Principal Modular -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Chart.js para visualización interactiva de estadísticas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -298,6 +300,206 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: ESTADÍSTICAS DE CAPACITACIONES (JULIO 2026) -->
+    <section class="section-alt" style="padding: 60px 0; background: rgba(10, 37, 64, 0.01); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" style="display: block; text-align: center; color: var(--color-primary); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Impacto y Cobertura de Formación</span>
+                <h2 class="section-title" style="text-align: center; color: var(--color-navy); font-size: 2.2rem; font-weight: 800; margin: 0;">Estadísticas de Capacitaciones - Julio 2026</h2>
+                <p style="color: var(--color-text-muted); max-width: 800px; margin: 15px auto 0; font-size: 1.05rem; line-height: 1.6; text-align: center;">
+                    Monitoreo y análisis de los <strong>4,108 participantes</strong> atendidos en los programas del Instituto Electoral durante el mes de julio de 2026.
+                </p>
+            </div>
+
+            <!-- Grid de Gráficos -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; max-width: 1280px; margin: 40px auto 0;">
+                
+                <!-- Gráfico 1: Cobertura por Actividad -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--color-primary); padding-left: 10px; font-family: var(--font-heading);">Cobertura por Programa Formativo</h3>
+                        <div style="position: relative; width: 100%; height: 280px;">
+                            <canvas id="chartCobertura"></canvas>
+                        </div>
+                    </div>
+                    <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        <strong>Descripción:</strong> Distribución del volumen de participantes capacitados por programa formativo. Destaca el <em>Voluntariado Cívico Electoral</em> con 1,302 participantes formados y el programa de <em>Mujeres liderando la gobernanza</em> con 755 participantes, reflejando el fuerte compromiso con la participación ciudadana juvenil e inclusión de género.
+                    </p>
+                </div>
+
+                <!-- Gráfico 2: Participación por Género -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--color-gold); padding-left: 10px; font-family: var(--font-heading);">Participación por Género</h3>
+                        <div style="position: relative; width: 100%; height: 280px; display: flex; justify-content: center; align-items: center;">
+                            <canvas id="chartGenero" style="max-height: 250px; max-width: 250px;"></canvas>
+                        </div>
+                    </div>
+                    <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        <strong>Descripción:</strong> Relación de beneficiarios por género. De los 4,108 capacitados, 2,813 son mujeres (68.5%) y 1,295 son hombres (31.5%), demostrando el protagonismo activo de las mujeres guatemaltecas en la formación democrática nacional.
+                    </p>
+                </div>
+
+                <!-- Gráfico 3: Autoidentificación Cultural -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--color-primary); padding-left: 10px; font-family: var(--font-heading);">Autoidentificación Cultural</h3>
+                        <div style="position: relative; width: 100%; height: 280px; display: flex; justify-content: center; align-items: center;">
+                            <canvas id="chartEtnia" style="max-height: 250px; max-width: 250px;"></canvas>
+                        </div>
+                    </div>
+                    <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        <strong>Descripción:</strong> Autoidentificación cultural del padrón de beneficiarios. Muestra la cobertura inclusiva que abarca a 2,847 participantes Ladinos (69.3%), 957 Mayas (23.3%), 39 Xinkas (0.95%) y 20 Garífunas (0.49%), garantizando la representatividad y el alcance multicultural de la formación.
+                    </p>
+                </div>
+
+                <!-- Gráfico 4: Cobertura por Grupo Etario -->
+                <div style="background: #FFFFFF; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--color-navy); font-size: 1.15rem; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--color-gold); padding-left: 10px; font-family: var(--font-heading);">Cobertura por Grupo Etario</h3>
+                        <div style="position: relative; width: 100%; height: 280px;">
+                            <canvas id="chartEdad"></canvas>
+                        </div>
+                    </div>
+                    <p style="color: var(--color-text-muted); font-size: 0.85rem; line-height: 1.5; margin-top: 20px; margin-bottom: 0;">
+                        <strong>Descripción:</strong> Segmentación de participantes por rangos de edad. Los grupos jóvenes de 18 a 30 años representan el 29% (1,189 participantes), mientras que los rangos de 36 a 45 años concentran el mayor volumen de formación, sumando 1,615 personas (39.3% del total).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Chart Cobertura por Programa
+            const ctxCobertura = document.getElementById('chartCobertura').getContext('2d');
+            new Chart(ctxCobertura, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Voluntariado Cívico Electoral',
+                        'Mujeres Liderando la Gobernanza',
+                        'Diplomado Derecho Electoral (Da Vinci)',
+                        'Partidos Políticos en Democracia',
+                        'Diplomado Financiamiento y Cuentas',
+                        'Fiscales de Organizaciones Políticas',
+                        'Educación para la Democracia'
+                    ],
+                    datasets: [{
+                        label: 'Participantes',
+                        data: [1302, 755, 704, 544, 506, 204, 93],
+                        backgroundColor: [
+                            '#0076CC', '#FFB800', '#00205B', '#496E86', '#00C9FF', '#2ECC71', '#E74C3C'
+                        ],
+                        borderRadius: 6,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#0A2540' }
+                    },
+                    scales: {
+                        x: { 
+                            grid: { display: false },
+                            ticks: { font: { family: 'Inter', size: 10 } }
+                        },
+                        y: { 
+                            grid: { display: false },
+                            ticks: { font: { family: 'Inter', size: 10 } }
+                        }
+                    }
+                }
+            });
+
+            // 2. Chart Género
+            const ctxGenero = document.getElementById('chartGenero').getContext('2d');
+            new Chart(ctxGenero, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Mujeres (68.5%)', 'Hombres (31.5%)'],
+                    datasets: [{
+                        data: [2813, 1295],
+                        backgroundColor: ['#FFB800', '#0076CC'],
+                        borderWidth: 2,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Inter', size: 11 } } },
+                        tooltip: { backgroundColor: '#0A2540' }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // 3. Chart Etnia
+            const ctxEtnia = document.getElementById('chartEtnia').getContext('2d');
+            new Chart(ctxEtnia, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Ladino (69.3%)', 'Maya (23.3%)', 'Xinka (1.0%)', 'Garífuna (0.5%)', 'No especificado (6.0%)'],
+                    datasets: [{
+                        data: [2847, 957, 39, 20, 245],
+                        backgroundColor: ['#0076CC', '#FFB800', '#496E86', '#00C9FF', '#E2EBF2'],
+                        borderWidth: 2,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Inter', size: 11 } } },
+                        tooltip: { backgroundColor: '#0A2540' }
+                    },
+                    cutout: '65%'
+                }
+            });
+
+            // 4. Chart Edad
+            const ctxEdad = document.getElementById('chartEdad').getContext('2d');
+            new Chart(ctxEdad, {
+                type: 'bar',
+                data: {
+                    labels: ['13-17', '18-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55'],
+                    datasets: [{
+                        label: 'Participantes',
+                        data: [26, 719, 470, 394, 839, 776, 545, 339],
+                        backgroundColor: '#0076CC',
+                        borderRadius: 6,
+                        hoverBackgroundColor: '#005FA5'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#0A2540' }
+                    },
+                    scales: {
+                        x: { 
+                            grid: { display: false },
+                            ticks: { font: { family: 'Inter', size: 10 } }
+                        },
+                        y: { 
+                            grid: { display: false },
+                            ticks: { font: { family: 'Inter', size: 10 } }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
     <!-- SECCIÓN: ESTADÍSTICAS CÍVICAS -->
     <section class="section" style="padding: 60px 0; background: #FFFFFF; border-bottom: 1px solid var(--color-border);">
